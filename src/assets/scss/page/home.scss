@@ -1,0 +1,32 @@
+.home {
+    .banner {
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            object-position: top bottom;
+        }
+        .title {
+            background: rgba(black, 0.3);
+            position: absolute;
+            width: 70%;
+            height: 40%;
+            max-width: 260px;
+            max-height: 80px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .duck {
+            display: block;
+            position: absolute;
+            width: 100px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+}
