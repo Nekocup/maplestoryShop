@@ -29,4 +29,18 @@
             left: 0;
         }
     }
+    .about {
+        img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            max-width: 554px;
+        }
+        max-width: 1200px;
+        margin: auto;
+    }
+    .hotSale {
+        max-width: 1200px;
+        margin: auto;
+    }
 }

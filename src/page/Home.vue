@@ -15,14 +15,37 @@
         class="duck ma-auto pb-3"
       />
     </div>
+    <v-container class="modifyContainer">
+      <div class="hotSale pt-5 pb-2">
+        <div class="text-h4 text-center pb-10">熱門商品</div>
+        <HotSaleSwiper></HotSaleSwiper>
+      </div>
+      <div class="about pt-2">
+        <v-row>
+          <v-col cols="12" md="6">
+            <div class="title text-h4 font-weight-bold text-center pt-7">
+              關於楓之谷
+            </div>
+            <div class="text-h5 pt-8 pr-10">
+              新楓之谷是一款橫向捲軸平面動作操作的免費大型多人線上角色扮演遊戲
+              ，由韓國Wizet開發。每位玩家都想在這遊戲裡發大財，超低機率的大獎轉蛋使得楓之谷的物價水漲船高，又別名為「楓之股」。
+            </div>
+          </v-col>
+          <v-col cols="12" md="6">
+            <img src="@/assets/image/page/home/pikachu.png" alt="" />
+          </v-col>
+        </v-row>
+      </div>
+    </v-container>
   </div>
 </template>
 
 <script>
+import HotSaleSwiper from "@/components/hotSaleSwiper.vue";
 export default {
   name: "Home",
+  components: {
+    HotSaleSwiper,
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
