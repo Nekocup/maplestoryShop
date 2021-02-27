@@ -1,14 +1,14 @@
 <template>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide v-for="product in hotSale" :key="product.id">
-      <div class="HotCard rounded-lg pa-3">
+      <div class="HotCard rounded-lg pa-10">
         <img :src="product.image" alt="" />
         <div class="contain">
           <div class="text-h6 font-weight-bold">{{ product.name }}</div>
           <div class="description text-left pt-2 grey--text text--darken-1">
             {{ product.description }}
           </div>
-          <div class="text-h6 pt-3 red--text text--lighten-1">
+          <div class="text-h6 pt-6 red--text text--lighten-1 pb-6">
             ${{ product.price }}
           </div>
         </div>
@@ -16,6 +16,7 @@
           <v-btn elevation="2" rounded class="mt-2 mb-2"> 詳細資訊 </v-btn>
           <v-btn elevation="2" rounded class="mt-2 mb-2"> 加入購物車 </v-btn>
         </div>
+        <div class="hot red accent-4 white--text pa-3 rounded-b-lg">HOT</div>
       </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -39,6 +40,20 @@ export default {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 20,
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 30,
+          },
+          793: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 30,
+          },
         },
       },
       hotSale: [],
@@ -64,6 +79,11 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .hot {
+    position: absolute;
+    top: 0;
+    right: 5%;
   }
 }
 </style>
