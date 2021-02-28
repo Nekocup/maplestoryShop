@@ -13,20 +13,22 @@
           </div>
         </div>
         <div class="d-flex flex-column">
-          <v-btn elevation="2" rounded class="mt-2 mb-2"> 詳細資訊 </v-btn>
-          <v-btn elevation="2" rounded class="mt-2 mb-2"> 加入購物車 </v-btn>
+          <v-btn elevation="2" rounded class="mt-2 mb-2 font-weight-bold">
+            詳細資訊
+          </v-btn>
+          <v-btn elevation="2" rounded class="mt-2 mb-2 font-weight-bold">
+            加入購物車
+          </v-btn>
         </div>
         <div class="hot red accent-4 white--text pa-3 rounded-b-lg">HOT</div>
       </div>
     </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import { getHotSale } from "@/api/product.js";
-
 export default {
   components: {
     Swiper,
@@ -37,10 +39,6 @@ export default {
       swiperOption: {
         slidesPerView: 3,
         spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
         breakpoints: {
           0: {
             slidesPerView: 1,

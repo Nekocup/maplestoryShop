@@ -1,0 +1,49 @@
+<template>
+  <footer
+    class="d-flex flex-column align-center justify-center grey--text text--darken-1 text-center"
+  >
+    <div>
+      <a href="https://www.facebook.com/dyk881229/"
+        ><v-icon class="pa-2">mdi-facebook</v-icon></a
+      >
+      <a href="https://www.instagram.com/zxclf1bbb"
+        ><v-icon class="pa-2">mdi-instagram</v-icon></a
+      >
+      <a href="https://github.com/Nekocup"
+        ><v-icon class="pa-2">mdi-github</v-icon></a
+      >
+      <a href="https://twitter.com/Nekocup7755"
+        ><v-icon class="pa-2">mdi-twitter</v-icon></a
+      >
+    </div>
+    <div>版權所有© 2021 Nekocup</div>
+    <div class="mb-3">所有的圖片和內容歸MapleStory所有</div>
+    <img src="@/assets/image/components/footer/bigStone.png" alt="" />
+  </footer>
+</template>
+<script>
+export default {};
+</script>
+
+<style lang="scss">
+footer {
+  background: blanchedalmond;
+  position: relative;
+  height: 200px;
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 30%;
+    max-width: 330px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer img {
+    display: none;
+  }
+}
+</style>
