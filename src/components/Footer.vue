@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="d-flex flex-column align-center justify-center grey--text text--darken-1 text-center"
+    class="d-flex flex-column align-center justify-center grey--text text--darken-1 text-center pt-3 pb-1"
   >
     <div>
       <a href="https://www.facebook.com/dyk881229/"
@@ -17,8 +17,7 @@
       >
     </div>
     <div>版權所有© 2021 Nekocup</div>
-    <div class="mb-3">所有的圖片和內容歸MapleStory所有</div>
-    <img src="@/assets/image/components/footer/bigStone.png" alt="" />
+    <div>所有的圖片和內容歸 NEXON Korea Corporation 所有</div>
   </footer>
 </template>
 <script>
@@ -29,16 +28,8 @@ export default {};
 footer {
   background: blanchedalmond;
   position: relative;
-  height: 200px;
   a {
     text-decoration: none;
-  }
-  img {
-    width: 30%;
-    max-width: 330px;
-    position: absolute;
-    right: 0;
-    bottom: 0px;
   }
 }
 @media screen and (max-width: 768px) {

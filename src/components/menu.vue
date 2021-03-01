@@ -11,16 +11,13 @@
     <div class="navbar pt-5" :style="{ right: navBarRight }">
       <ul>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#">首頁</a>
+          <a href="#/">首頁</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
           <a href="#">瀏覽商品</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
           <a href="#">購物車</a>
-        </li>
-        <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#">關於楓之谷</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
           <a href="#">登入</a>
