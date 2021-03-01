@@ -17,7 +17,7 @@
     </div>
     <v-container class="modifyContainer">
       <div class="hotSale pt-5 pb-2">
-        <div class="text-h4 text-center pb-10">熱門商品</div>
+        <div class="text-h4 text-center pb-10">最近熱門</div>
         <HotSaleSwiper></HotSaleSwiper>
       </div>
       <div class="about pt-2">

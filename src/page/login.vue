@@ -25,7 +25,9 @@
           class="mt-3 mb-3 pa-1 rounded"
           v-model="password"
         />
-        <v-btn class="ma-auto mt-3 mb-3 pa-1 rounded pink lighten-2 white--text"
+        <v-btn
+          @click="loginVerify({ email, password })"
+          class="ma-auto mt-15 mb-3 pa-1 rounded pink lighten-2 white--text"
           >登入</v-btn
         >
       </main>
@@ -40,12 +42,27 @@
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   data() {
     return {
       email: "",
       password: "",
     };
+  },
+  computed: {
+    ...mapGetters({
+      isLogin: "isLogin",
+    }),
+  },
+  methods: {
+    ...mapActions({ loginVerify: "loginVerify" }),
+  },
+  mounted() {
+    if (this.isLogin) {
+      this.$router.push("/");
+    }
   },
 };
 </script>

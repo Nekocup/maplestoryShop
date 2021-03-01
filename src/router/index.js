@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../page/Home.vue'
-
+import store from '../store/index'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,7 +18,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
