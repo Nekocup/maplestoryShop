@@ -1,0 +1,27 @@
+.login {
+    padding-top: 90px;
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    // background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+    .loginFrom {
+        width: 80%;
+        max-width: 350px;
+        box-shadow: 1px 1px 5px black;
+    }
+    main {
+        input {
+            border: 1px solid grey;
+            width: 80%;
+        }
+        button {
+            display: block;
+            width: 80%;
+        }
+    }
+    .picList {
+        img {
+            width: 100px;
+        }
+    }
+}

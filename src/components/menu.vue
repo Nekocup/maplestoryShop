@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="logo">
-      <a href="#/">
+      <a href="/">
         <img src="@/assets/image//components/menu/logo.png" alt="" />
       </a>
     </div>
@@ -11,16 +11,13 @@
     <div class="navbar pt-5" :style="{ right: navBarRight }">
       <ul>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#/">首頁</a>
-        </li>
-        <li class="pa-5 text-center text-h6 font-weight-bold">
           <a href="#">瀏覽商品</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
           <a href="#">購物車</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#">登入</a>
+          <a href="/login">登入</a>
         </li>
       </ul>
     </div>

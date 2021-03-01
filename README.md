@@ -9,3 +9,5 @@
   * http://gametsg.techbang.com/maplestory/
 * MapleStory Wiki
   * https://maplestory.wiki/TMS/209/mob/3210204  
+* giphy
+  * https://giphy.com/

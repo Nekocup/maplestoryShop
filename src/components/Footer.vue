@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="d-flex flex-column align-center justify-center grey--text text--darken-1 text-center pt-3 pb-1"
+    class="d-flex flex-column align-center justify-center grey--text text--darken-1 text-center pt-3 pb-1 grey lighten-2"
   >
     <div>
       <a href="https://www.facebook.com/dyk881229/"
@@ -26,7 +26,7 @@ export default {};
 
 <style lang="scss">
 footer {
-  background: blanchedalmond;
+  // background: blanchedalmond;
   position: relative;
   a {
     text-decoration: none;
