@@ -14,7 +14,7 @@
           <a href="#">瀏覽商品</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#">購物車</a>
+          <a href="#/shopCart">購物車</a>
         </li>
         <template v-if="isLogin">
           <li class="pa-5 text-center text-h6 font-weight-bold">

@@ -16,8 +16,8 @@
         ><v-icon class="pa-2">mdi-twitter</v-icon></a
       >
     </div>
-    <div>版權所有© 2021 Nekocup</div>
-    <div>所有的圖片和內容歸 NEXON Korea Corporation 所有</div>
+    <div class="text-h7">版權所有© 2021 Nekocup</div>
+    <div class="text-h7">所有的圖片和內容歸 NEXON Korea Corporation 所有</div>
   </footer>
 </template>
 <script>

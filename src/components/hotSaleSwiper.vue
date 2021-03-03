@@ -16,7 +16,12 @@
           <v-btn elevation="2" rounded class="mt-2 mb-2 font-weight-bold">
             詳細資訊
           </v-btn>
-          <v-btn elevation="2" rounded class="mt-2 mb-2 font-weight-bold">
+          <v-btn
+            elevation="2"
+            rounded
+            class="mt-2 mb-2 font-weight-bold"
+            @click="addCartVerify(product)"
+          >
             加入購物車
           </v-btn>
         </div>
@@ -29,6 +34,7 @@
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import { getHotSale } from "@/api/product.js";
+import { mapActions } from "vuex";
 export default {
   components: {
     Swiper,
@@ -61,6 +67,11 @@ export default {
     getHotSale().then((data) => {
       this.hotSale = data;
     });
+  },
+  methods: {
+    ...mapActions({
+      addCartVerify: "addCartVerify",
+    }),
   },
 };
 </script>
