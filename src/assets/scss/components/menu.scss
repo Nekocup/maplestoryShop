@@ -48,6 +48,16 @@
     .on {
         height: 100vh;
     }
+    .menuShopCartOuter {
+        position: relative;
+        width: 100px;
+    }
+    .menuShopCart {
+        padding: 2px 8px;
+        position: absolute;
+        right: 1px;
+        bottom: -5px;
+    }
 }
 @media screen and(max-width:767px) {
     .menu {

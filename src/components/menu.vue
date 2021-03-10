@@ -5,25 +5,40 @@
         <img src="@/assets/image//components/menu/logo.png" alt="" />
       </a>
     </div>
-    <div class="hambuger" @click="displayNavbar">
+    <div class="hambuger" @click="toggleNavbar">
       <v-icon large :color="color">mdi-menu</v-icon>
     </div>
     <div class="navbar pt-5" :style="{ right: navBarRight }">
       <ul>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#">瀏覽商品</a>
+          <a href="#/products" @click="hiddenNavbar">瀏覽商品</a>
         </li>
         <li class="pa-5 text-center text-h6 font-weight-bold">
-          <a href="#/shopCart">購物車</a>
+          <div class="menuShopCartOuter ma-auto">
+            <a href="#/shopCart" @click="hiddenNavbar">購物車</a>
+            <div
+              class="red white--text menuShopCart rounded-circle text-caption d-flex align-center justify-center"
+              v-if="getShopCartLength !== 0"
+            >
+              {{ getShopCartLength }}
+            </div>
+          </div>
         </li>
         <template v-if="isLogin">
           <li class="pa-5 text-center text-h6 font-weight-bold">
-            <a @click="logout">登出</a>
+            <a
+              @click="
+                logout();
+                hiddenNavbar();
+              "
+              :key="'logout'"
+              >登出</a
+            >
           </li>
         </template>
         <template v-else>
           <li class="pa-5 text-center text-h6 font-weight-bold">
-            <a href="#/login">登入</a>
+            <a href="#/login" @click="hiddenNavbar" :key="'login'">登入</a>
           </li>
         </template>
       </ul>
@@ -31,7 +46,7 @@
     <div
       class="mask-bg"
       :class="{ on: maskBgDisplay }"
-      @click="displayNavbar"
+      @click="toggleNavbar"
     ></div>
   </div>
 </template>
@@ -56,9 +71,13 @@ export default {
       this.color = this.color == "" ? "black" : "";
       return "change the Icon color!";
     },
-    displayNavbar() {
+    toggleNavbar() {
       this.navBarRight = this.navBarRight === "768px" ? "0px" : "768px";
       this.maskBgDisplay = this.maskBgDisplay === false ? true : false;
+    },
+    hiddenNavbar() {
+      this.navBarRight = "768px";
+      this.maskBgDisplay = false;
     },
     ...mapActions({
       logout: "logout",
@@ -67,6 +86,7 @@ export default {
   computed: {
     ...mapGetters({
       isLogin: "isLogin",
+      getShopCartLength: "getShopCartLength",
     }),
   },
   destroyed() {

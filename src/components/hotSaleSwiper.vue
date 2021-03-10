@@ -1,7 +1,7 @@
 <template>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide v-for="product in hotSale" :key="product.id">
-      <div class="HotCard rounded-lg pa-10">
+      <!-- <div class="HotCard rounded-lg pa-10">
         <img :src="product.image" alt="" />
         <div class="contain">
           <div class="text-h6 font-weight-bold">{{ product.name }}</div>
@@ -13,20 +13,31 @@
           </div>
         </div>
         <div class="d-flex flex-column">
-          <v-btn elevation="2" rounded class="mt-2 mb-2 font-weight-bold">
+          <v-btn
+            elevation="2"
+            rounded
+            class="mt-2 mb-2 font-weight-bold"
+            outlined="true"
+          >
             詳細資訊
           </v-btn>
           <v-btn
             elevation="2"
             rounded
             class="mt-2 mb-2 font-weight-bold"
+            outlined="true"
             @click="addCartVerify(product)"
           >
             加入購物車
           </v-btn>
         </div>
-        <div class="hot red accent-4 white--text pa-3 rounded-b-lg">HOT</div>
-      </div>
+        <div
+          class="hot red accent-4 white--text pa-3 rounded-b-lg font-weight-bold"
+        >
+          HOT
+        </div>
+      </div> -->
+      <productCard :product="product"></productCard>
     </swiper-slide>
   </swiper>
 </template>
@@ -34,11 +45,12 @@
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import { getHotSale } from "@/api/product.js";
-import { mapActions } from "vuex";
+import productCard from "@/components/productCard";
 export default {
   components: {
     Swiper,
     SwiperSlide,
+    productCard,
   },
   data() {
     return {
@@ -68,31 +80,5 @@ export default {
       this.hotSale = data;
     });
   },
-  methods: {
-    ...mapActions({
-      addCartVerify: "addCartVerify",
-    }),
-  },
 };
 </script>
-
-<style lang="scss">
-.HotCard {
-  border: 2px solid gray;
-  text-align: center;
-  img {
-    width: 60px;
-    height: 60px;
-  }
-  .description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .hot {
-    position: absolute;
-    top: 0;
-    right: 5%;
-  }
-}
-</style>

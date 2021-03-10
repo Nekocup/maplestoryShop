@@ -11,9 +11,9 @@ export default {
             let password = emailPass.password
             if(emailRegxp.test(email) && password != ''){
                 commit('login',emailPass.email)
-                location.href = '.#/'
+                location.href = '#/'
+                return 200
             }else {
-                alert("帳號或密碼格式錯誤")
                 return 400
             }
         },
@@ -21,6 +21,9 @@ export default {
         logout( { state , commit}){
             if( state.email !== ""){
                 commit('logout')
+                commit('clearShopCart')
+                location.href= "#/"
+                return 200
             } else {
                 return 401
             }
@@ -29,7 +32,10 @@ export default {
         addCartVerify({state, commit}, detail) {
             if(state.email !== null){
                 commit('addCart', detail)
+                return 200
             }else {
+                alert('請先登入')
+                location.href = "#/login";
                 return 401
             }
         },
@@ -45,6 +51,7 @@ export default {
             })
             if(state.email !== null && pass){
                 commit('addCount', id)
+                return 200
             }else {
                 return 401
             }
@@ -65,6 +72,21 @@ export default {
             }else {
                 return 401
             }            
+        },
+        removeProductVerify({state, commit}, id) {
+            let pass = false
+            for(let i=0; i<state.shopCart.length; i++) {
+                if(state.shopCart[i].detail.id === id ){
+                    commit('removeProduct', i)
+                    pass = true
+                    break
+                }
+            }
+
+            if(pass) {
+                return 200
+            }
+            return 401
         }
     },
     mutations: {
@@ -73,6 +95,10 @@ export default {
         },
         logout(state){
             state.email = null
+            
+        },
+        clearShopCart(state){
+            state.shopCart = []
         },
         addCart(state, detail) {
             
@@ -102,7 +128,10 @@ export default {
                     product.count --
                 }
             })
-        }
+        },
+        removeProduct(state,spliceId) {
+            state.shopCart.splice(spliceId, 1)
+        },
     }, 
     getters: {
         // 是否登入
@@ -115,6 +144,10 @@ export default {
         },
         getShopCart(state) {
             return state.shopCart
-        }
+        },
+        getShopCartLength(state) {
+            return state.shopCart.length
+        },
+        
     },
 }

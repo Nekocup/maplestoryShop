@@ -25,9 +25,16 @@
           class="mt-3 mb-3 pa-1 rounded"
           v-model="password"
         />
+        <div v-show="statusMsg === 400 ? true : false" class="red--text">
+          信箱格式錯誤 !
+        </div>
         <v-btn
-          @click="loginVerify({ email, password })"
-          class="ma-auto mt-15 mb-3 pa-1 rounded pink lighten-2 white--text"
+          @click="
+            loginVerify({ email, password }).then((status) => {
+              statusMsg = status;
+            })
+          "
+          class="ma-auto mt-10 mb-3 pa-1 rounded pink lighten-2 white--text"
           >登入</v-btn
         >
       </main>
@@ -49,6 +56,7 @@ export default {
     return {
       email: "",
       password: "",
+      statusMsg: 0,
     };
   },
   computed: {

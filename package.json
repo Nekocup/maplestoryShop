@@ -10,7 +10,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "lodash": "^4.17.21",
     "swiper": "^6.4.15",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
