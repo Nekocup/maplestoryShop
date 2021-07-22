@@ -1,0 +1,56 @@
+.products {
+    max-width: 1600px;
+    margin: auto;
+    .classify {
+        .title {
+            cursor: pointer;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 6px 0 6px;
+                border-color: white transparent transparent transparent;
+                position: absolute;
+                right: 10px;
+                top: 18.5px;
+            }
+            &:hover {
+                background: lemonchiffon;
+            }
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li {
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .classify-hidden {
+        display: none;
+    }
+}
+
+@media screen and(min-width:1263px) {
+    .products {
+        .classify-hidden {
+
+            display: block;
+        }
+        .classify {
+            padding-top: 50px;
+            width: 80%;
+            .title {
+                cursor: auto;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

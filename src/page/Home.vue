@@ -3,7 +3,15 @@
     <div class="banner">
       <img src="@/assets/image/page/home/banner.jpg" alt="not fond" />
       <div
-        class="title text-center ma-auto d-flex justify-center align-center rounded-lg"
+        class="
+          title
+          text-center
+          ma-auto
+          d-flex
+          justify-center
+          align-center
+          rounded-lg
+        "
       >
         <div class="text-h6 text-md-h5 white--text pa-2 font-weight-bold">
           全台最小的楓之谷交易網站

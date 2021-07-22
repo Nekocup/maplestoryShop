@@ -53,6 +53,7 @@ export default {
 </script>
 <style lang="scss">
 .HotCard {
+  position: relative;
   border: 2px solid gray;
   text-align: center;
   img {
