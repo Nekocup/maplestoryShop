@@ -4,6 +4,7 @@
 * 2021/02/26 創建檔案
 * 2021/02/28 完成首頁
 * 2021/07/22 完成瀏覽商品
+* 2021/08/18 完成商品詳細資訊頁面
 ## 圖片來源
 * 新楓之谷透視鏡
   * http://gametsg.techbang.com/maplestory/
@@ -11,3 +12,5 @@
   * https://maplestory.wiki/TMS/209/mob/3210204  
 * giphy
   * https://giphy.com/
+* cleanpng
+  * https://www.cleanpng.com/

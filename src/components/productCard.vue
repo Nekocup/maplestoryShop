@@ -16,6 +16,7 @@
         rounded
         class="mt-2 mb-2 font-weight-bold"
         :outlined="true"
+        @click="$router.push(`/product/${product.id}`)"
       >
         詳細資訊
       </v-btn>

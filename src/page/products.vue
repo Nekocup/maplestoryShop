@@ -43,7 +43,7 @@
 </template>
 <script>
 import productCard from "@/components/productCard";
-import { getSale } from "@/api/product.js";
+import { getSales } from "@/api/product.js";
 export default {
   data() {
     return {
@@ -60,14 +60,14 @@ export default {
       this.classifyDisplay = !this.classifyDisplay;
     },
     changeClassify(classfity) {
-      getSale(classfity).then((data) => {
+      getSales(classfity).then((data) => {
         this.sales = data;
       });
       this.classfityTitle = classfity;
     },
   },
   mounted() {
-    getSale("全部").then((data) => {
+    getSales("全部").then((data) => {
       this.sales = data;
     });
   },

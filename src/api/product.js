@@ -15,11 +15,10 @@ export function getHotSale(){
         rej(err)    
     })        
     })
-
 }
 
 // 分類商品
-export function getSale(classify){
+export function getSales(classify){
     return new Promise((res,rej)=>{
     axios.get(url).then((response)=>{
         let allData = response.data.product
@@ -34,5 +33,20 @@ export function getSale(classify){
         rej(err)    
     })        
     })
+}
 
+
+// 單樣商品
+export function getItem(ItemID){
+    return new Promise((res,rej)=>{
+    axios.get(url).then((response)=>{
+        let allData = response.data.product
+        let Item = allData.filter((data)=>{
+            return data.id == ItemID
+        })
+        res(Item)           
+    }).catch((err)=>{
+        rej(err)    
+    })        
+    })
 }
